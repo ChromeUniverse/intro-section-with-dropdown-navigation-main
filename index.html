@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <nav class="nav">
+    <img src="images/logo.svg" alt="">
+    <div class="nav-links">
+      <div class="nav-link-item nav-link-dropdown">
+        <div class="nav-link-wrapper" id="menu-1-toggle">
+          <p class="nav-link-text">Features</p>
+          <img class="arrow-icon" src="images/icon-arrow-down.svg" alt="">
+        </div>
+        <div class="nav-dropdown-menu menu-1 menu-1-collapsed" id="menu-1">
+          <img class="icon-1" src="images/icon-todo.svg" alt="">
+          <p class="item-1">Todo List</p>                  
+          <img class="icon-2" src="images/icon-calendar.svg" alt="">
+          <p class="item-2">Calendar</p>              
+          <img class="icon-3" src="images/icon-reminders.svg" alt="">
+          <p class="item-3">Reminders</p>          
+          <img class="icon-4" src="images/icon-planning.svg" alt="">
+          <p class="item-4">Planning</p>          
+        </div>
+      </div>      
+      <div class="nav-link-item nav-link-dropdown">
+        <div class="nav-link-wrapper" id="menu-2-toggle">
+          <p class="nav-link-text">Company</p>
+          <img class="arrow-icon" src="images/icon-arrow-down.svg" alt="">
+        </div>        
+        <div class="nav-dropdown-menu menu-2 menu-2-collapsed" id="menu-2">
+          <p class="item">History</p>
+          <p class="item">Our Team</p>
+          <p class="item">Blog</p>
+        </div>
+      </div>
+      <p class="nav-link-text">Careers</p>
+      <p class="nav-link-text">About</p>
+    </div>
+    <div class="nav-auth">
+      <p class="nav-auth-login">Login</p>
+      <p class="nav-auth-register">Register</p>
+    </div>
+  </nav>  
+  <main class="main">
+    <section class="main-content">
+      <h1 class="main-title">Make remote work</h1>
+      <p class="main-desc">
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.
+      </p>
+      <button class="main-btn">Learn more</button>
+      <div class="main-clients">
+        <img class="main-clients-item" src="images/client-databiz.svg" alt="">
+        <img class="main-clients-item" src="images/client-audiophile.svg" alt="">
+        <img class="main-clients-item" src="images/client-meet.svg" alt="">
+        <img class="main-clients-item" src="images/client-maker.svg" alt="">
+      </div>
+    </section>    
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
