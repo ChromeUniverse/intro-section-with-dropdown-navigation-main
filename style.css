@@ -25,8 +25,23 @@ body {
   align-items: center;
 } 
 
+.nav-menu-icon {
+  display: none;
+}
+
+.nav-content-container {
+  margin-left: auto;
+  width: 100%;
+}
+
+.nav-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
 .nav-links {
-  margin-left: 50px;
+  margin-left: 40px;
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -53,6 +68,14 @@ body {
 
 .nav-link-text:hover {
   color: var(--almost-black);
+}
+
+.arrow-icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.arrow-icon-up {
+  transform: rotate(180deg);
 }
 
 .nav-link-wrapper:hover .arrow-icon {
@@ -126,9 +149,23 @@ body {
 }
 
 .item-1, .item-2, .item-3, .item-4 {
+  color: var(--medium-gray);
   font-size: 10px;
   align-self: center;
   padding-top: 2px;
+  cursor: pointer;
+}
+
+.item {
+  color: var(--medium-gray);
+}
+
+.item:hover,
+.item-1:hover,
+.item-2:hover,
+.item-3:hover,
+.item-4:hover {
+  color: var(--almost-black);
 }
 
 .icon-1 {grid-area: icon-1;}
@@ -177,6 +214,10 @@ body {
   background-size: contain;
 }
 
+.hero-mobile {
+  display: none;
+}
+
 .main-content {
   height: 100%;
   padding-left: 30px;
@@ -208,7 +249,7 @@ body {
   border: thin solid transparent;
   width: 110px;
   height: 35px;
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -224,4 +265,172 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+}
+
+@media (max-width: 1000px) {
+
+  body {
+    width: 100vw;
+    /* width: auto; */
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    /* overflow: hidden;  */
+  }
+
+  .nav {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-logo {
+    padding-top: 7px;
+  }
+
+  .nav-menu-icon {
+    display: block;
+    z-index: 3;
+  }
+
+  .shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    background-color: var(--almost-black);
+  }
+
+  .shade-active {
+    opacity: 0.8;
+  }
+
+  .nav-content, .nav-links, .nav-auth {
+    flex-direction: column;
+    z-index: 1;
+    align-items: flex-start;
+    /* background-color: antiquewhite; */
+    background-color: white;
+  }
+
+  .nav-content-container {
+    position: absolute;
+    box-sizing: content-box;
+    top: 0;
+    right: 0;
+    height: calc(100vh - 73px - 20px);
+    width: 60vw;
+    background-color: white;
+    padding: 73px 20px 20px 20px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .nav-content {
+    position: absolute;
+    top: 0;
+    right: 0vw;
+    height: auto;
+    width: 60vw;
+    box-sizing: content-box;
+    padding: 73px 20px 20px 20px;
+    transition: all 0.4s ease-in-out;  
+  }
+
+  .nav-hidden {
+    opacity: 0;
+    padding: 73px 20px 20px 20px;
+    transition: all 0.4s ease-in-out;    
+  }
+
+  .nav-links {
+    margin-left: 0;
+  }
+
+  .nav-link-text {
+    font-size: 16px;
+  }
+
+  .nav-dropdown-menu {
+    position: relative;
+    box-shadow: none;
+    row-gap: 17px;
+    column-gap: 12px;
+    padding: 20px 0 20px 20px;
+  }
+
+  .menu-1-collapsed, .menu-2-collapsed {
+    padding: 0px 0px 0px 20px;
+  }
+
+  .item, .item-1, .item-2, .item-3, .item-4 {
+    font-size: 16px;
+  }
+
+  .nav-auth {
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+    align-self: center;    
+  }
+
+  .nav-auth-login, .nav-auth-register {
+    font-size: 15px;
+  }
+
+  .nav-auth-register {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main {
+    width: 100vw;
+    background-image: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .main-content {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main-title {
+    font-size: 37px;
+    text-align: center;
+  }
+
+  .main-desc {
+    width: 77%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .main-btn {
+    height: 50px;
+    font-size: 16px;
+    width: 150px;
+  }
+
+  .main-clients {
+    display: none;
+    width: 100%;
+    margin-top: 0;
+  }
+
 }

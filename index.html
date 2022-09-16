@@ -12,44 +12,51 @@
 </head>
 <body>
   <nav class="nav">
-    <img src="images/logo.svg" alt="">
-    <div class="nav-links">
-      <div class="nav-link-item nav-link-dropdown">
-        <div class="nav-link-wrapper" id="menu-1-toggle">
-          <p class="nav-link-text">Features</p>
-          <img class="arrow-icon" src="images/icon-arrow-down.svg" alt="">
+    <img class="nav-logo" src="images/logo.svg" alt="">
+    <img class="nav-menu-icon" src="images/icon-menu.svg" alt="" id="menu-toggle-mobile">
+    <div class="shade" id="shade"></div>
+    <div class="nav-content-container nav-hidden" id="nav-content-container">
+      <div class="nav-content nav-hidden" id="nav-content">
+        <div class="nav-links">
+          <div class="nav-link-item nav-link-dropdown">
+            <div class="nav-link-wrapper" id="menu-1-toggle">
+              <p class="nav-link-text">Features</p>
+              <img class="arrow-icon" src="images/icon-arrow-down.svg" alt="" id="arrow-icon-1">
+            </div>
+            <div class="nav-dropdown-menu menu-1 menu-1-collapsed" id="menu-1">
+              <img class="icon-1" src="images/icon-todo.svg" alt="">
+              <p class="item-1">Todo List</p>                  
+              <img class="icon-2" src="images/icon-calendar.svg" alt="">
+              <p class="item-2">Calendar</p>              
+              <img class="icon-3" src="images/icon-reminders.svg" alt="">
+              <p class="item-3">Reminders</p>          
+              <img class="icon-4" src="images/icon-planning.svg" alt="">
+              <p class="item-4">Planning</p>          
+            </div>
+          </div>      
+          <div class="nav-link-item nav-link-dropdown">
+            <div class="nav-link-wrapper" id="menu-2-toggle">
+              <p class="nav-link-text">Company</p>
+              <img class="arrow-icon" src="images/icon-arrow-down.svg" alt="" id="arrow-icon-2">
+            </div>        
+            <div class="nav-dropdown-menu menu-2 menu-2-collapsed" id="menu-2">
+              <p class="item">History</p>
+              <p class="item">Our Team</p>
+              <p class="item">Blog</p>
+            </div>
+          </div>
+          <p class="nav-link-text">Careers</p>
+          <p class="nav-link-text">About</p>
         </div>
-        <div class="nav-dropdown-menu menu-1 menu-1-collapsed" id="menu-1">
-          <img class="icon-1" src="images/icon-todo.svg" alt="">
-          <p class="item-1">Todo List</p>                  
-          <img class="icon-2" src="images/icon-calendar.svg" alt="">
-          <p class="item-2">Calendar</p>              
-          <img class="icon-3" src="images/icon-reminders.svg" alt="">
-          <p class="item-3">Reminders</p>          
-          <img class="icon-4" src="images/icon-planning.svg" alt="">
-          <p class="item-4">Planning</p>          
-        </div>
-      </div>      
-      <div class="nav-link-item nav-link-dropdown">
-        <div class="nav-link-wrapper" id="menu-2-toggle">
-          <p class="nav-link-text">Company</p>
-          <img class="arrow-icon" src="images/icon-arrow-down.svg" alt="">
-        </div>        
-        <div class="nav-dropdown-menu menu-2 menu-2-collapsed" id="menu-2">
-          <p class="item">History</p>
-          <p class="item">Our Team</p>
-          <p class="item">Blog</p>
+        <div class="nav-auth">
+          <p class="nav-auth-login">Login</p>
+          <p class="nav-auth-register">Register</p>
         </div>
       </div>
-      <p class="nav-link-text">Careers</p>
-      <p class="nav-link-text">About</p>
-    </div>
-    <div class="nav-auth">
-      <p class="nav-auth-login">Login</p>
-      <p class="nav-auth-register">Register</p>
     </div>
   </nav>  
   <main class="main">
+    <img class="hero-mobile" src="images/image-hero-mobile.png" alt="">
     <section class="main-content">
       <h1 class="main-title">Make remote work</h1>
       <p class="main-desc">
